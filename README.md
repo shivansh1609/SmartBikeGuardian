@@ -1,7 +1,7 @@
 # 🚲 SmartBike Guardian
 
 <p align="center">
-  <img src="screenshots/ui-preview.png" alt="SmartBike Guardian UI" width="100%">
+  <img src="ui-preview.png" alt="SmartBike Guardian UI" width="100%">
 </p>
 
 <p align="center">
