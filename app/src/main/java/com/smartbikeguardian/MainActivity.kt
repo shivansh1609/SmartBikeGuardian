@@ -3,7 +3,7 @@ package com.smartbikeguardian
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.smartbikeguardian.screens.splash.SplashScreen
+import com.smartbikeguardian.navigation.AppNavigation
 import com.smartbikeguardian.ui.theme.SmartBikeGuardianTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +13,9 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             SmartBikeGuardianTheme {
-                SplashScreen()
+
+                AppNavigation()
+
             }
         }
     }
