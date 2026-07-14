@@ -28,7 +28,9 @@ fun DashboardScreen(
 
     location: String = "IIIT Bhagalpur",
 
-    lastRide: String = "Today"
+    lastRide: String = "Today",
+
+    onParkingClick: () -> Unit = {}
 
 ) {
 
@@ -111,7 +113,9 @@ fun DashboardScreen(
 
                 modifier = Modifier.weight(1f),
 
-                title = "Parking"
+                title = "Parking",
+
+                onClick = onParkingClick
 
             )
 

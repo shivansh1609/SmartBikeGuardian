@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.smartbikeguardian.screens.dashboard.DashboardScreen
 import com.smartbikeguardian.screens.login.LoginScreen
 import com.smartbikeguardian.screens.splash.SplashScreen
+import com.smartbikeguardian.screens.parking.ParkingScreen
 
 @Composable
 fun AppNavigation() {
@@ -61,9 +62,25 @@ fun AppNavigation() {
         }
 
         // Dashboard Screen
+        // Dashboard Screen
         composable(Screen.Dashboard.route) {
 
-            DashboardScreen()
+            DashboardScreen(
+
+                onParkingClick = {
+
+                    navController.navigate(Screen.Parking.route)
+
+                }
+
+            )
+
+        }
+
+        // Parking Screen
+        composable(Screen.Parking.route) {
+
+            ParkingScreen()
 
         }
 
