@@ -9,19 +9,12 @@ import com.smartbikeguardian.ui.theme.SmartBikeGuardianTheme
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
 
         setContent {
-
             SmartBikeGuardianTheme {
-
                 SplashScreen()
-
             }
-
         }
-
     }
-
 }

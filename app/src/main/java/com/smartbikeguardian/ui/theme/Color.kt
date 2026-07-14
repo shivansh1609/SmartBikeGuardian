@@ -2,22 +2,15 @@ package com.smartbikeguardian.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Primary Colors
-val PrimaryGreen = Color(0xFF22C55E)
-val DarkGreen = Color(0xFF16A34A)
-val LightGreen = Color(0xFFDCFCE7)
+val PrimaryGreen = Color(0xFF27AE60)
+val DarkGreen = Color(0xFF1E8449)
+val LightGreen = Color(0xFFE8F8F0)
 
-// Background
 val Background = Color(0xFFF8FAFC)
 
-// Cards
-val CardWhite = Color(0xFFFFFFFF)
-
-// Text
-val TextPrimary = Color(0xFF111827)
+val TextPrimary = Color(0xFF1F2937)
 val TextSecondary = Color(0xFF6B7280)
 
-// Status
-val Success = Color(0xFF22C55E)
-val Warning = Color(0xFFF59E0B)
-val Error = Color(0xFFEF4444)
+val White = Color(0xFFFFFFFF)
+
+val CardColor = Color(0xFFFFFFFF)

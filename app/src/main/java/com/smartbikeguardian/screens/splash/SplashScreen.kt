@@ -1,72 +1,107 @@
 package com.smartbikeguardian.screens.splash
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.smartbikeguardian.R
+import com.smartbikeguardian.components.GreenButton
+import com.smartbikeguardian.components.OnboardingDots
 import com.smartbikeguardian.ui.theme.Background
 import com.smartbikeguardian.ui.theme.PrimaryGreen
+import com.smartbikeguardian.ui.theme.TextPrimary
 
 @Composable
-fun SplashScreen() {
+fun SplashScreen(
+    onGetStarted: () -> Unit = {}
+) {
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Background),
+            .background(Background)
+            .statusBarsPadding()
+            .navigationBarsPadding()
+            .padding(horizontal = 24.dp),
 
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-
+        horizontalAlignment = Alignment.Start
     ) {
 
-        Text(
-            text = "🚲",
-            fontSize = 80.sp
-        )
-
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(22.dp))
 
         Text(
             text = "SmartBike",
+            color = PrimaryGreen,
             fontSize = 34.sp,
-            fontWeight = FontWeight.Bold,
-            color = PrimaryGreen
+            fontWeight = FontWeight.ExtraBold
         )
 
         Text(
             text = "Guardian",
+            color = TextPrimary,
             fontSize = 34.sp,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.ExtraBold
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(12.dp))
 
         Text(
-            text = "Smarter Bikes.",
-            style = MaterialTheme.typography.bodyLarge
+            text = "Smarter Rides.",
+            fontSize = 17.sp,
+            color = Color.Gray
         )
 
         Text(
-            text = "Safer Rides.",
-            style = MaterialTheme.typography.bodyLarge
+            text = "Safer Bikes.",
+            fontSize = 17.sp,
+            color = Color.Gray
         )
 
         Text(
             text = "Stronger Cities.",
-            style = MaterialTheme.typography.bodyLarge
+            fontSize = 17.sp,
+            color = Color.Gray
         )
 
-    }
+        Spacer(modifier = Modifier.height(18.dp))
 
+        Image(
+            painter = painterResource(R.drawable.splash_hero),
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(430.dp),
+            contentScale = ContentScale.Fit
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        GreenButton(
+            text = "Get Started",
+            onClick = onGetStarted
+        )
+
+        Spacer(modifier = Modifier.height(14.dp))
+
+        Box(
+            modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center
+        ) {
+            OnboardingDots(
+                selectedIndex = 0,
+                totalDots = 4
+            )
+        }
+
+        Spacer(modifier = Modifier.weight(1f))
+    }
 }

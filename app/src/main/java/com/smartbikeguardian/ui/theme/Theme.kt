@@ -13,9 +13,12 @@ private val DarkColorScheme = darkColorScheme(
     tertiary = LightGreen,
 
     background = Background,
-    surface = CardWhite,
+    surface = White,
 
-    onPrimary = CardWhite,
+    onPrimary = White,
+    onSecondary = White,
+    onTertiary = White,
+
     onBackground = TextPrimary,
     onSurface = TextPrimary
 
@@ -25,12 +28,15 @@ private val LightColorScheme = lightColorScheme(
 
     primary = PrimaryGreen,
     secondary = DarkGreen,
-    tertiary = LightGreen,
+    tertiary = PrimaryGreen,
 
     background = Background,
-    surface = CardWhite,
+    surface = White,
 
-    onPrimary = CardWhite,
+    onPrimary = White,
+    onSecondary = White,
+    onTertiary = White,
+
     onBackground = TextPrimary,
     onSurface = TextPrimary
 
@@ -45,9 +51,10 @@ fun SmartBikeGuardianTheme(
 
 ) {
 
-    val colorScheme =
-        if (darkTheme) DarkColorScheme
-        else LightColorScheme
+    val colorScheme = if (darkTheme)
+        DarkColorScheme
+    else
+        LightColorScheme
 
     MaterialTheme(
 
@@ -58,5 +65,4 @@ fun SmartBikeGuardianTheme(
         content = content
 
     )
-
 }
